@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="assets/images/kidsbackground.jpg" alt="Background Image" class="img-fluid"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; object-fit: cover;">
+
+  <div class="container" style="position: relative; z-index: 2;">
+    <a class="navbar-brand" style="margin-left: 8px; font: bold; font-size: 30px;" href="#">Tech Kidz...</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

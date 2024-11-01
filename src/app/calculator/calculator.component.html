@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .calculator {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    #display {
+      height: 60px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <input type="text" id="display" class="form-control text-right mb-3" [(ngModel)]="final">
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-danger btn-block" (click)="clearDisplay()">C</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-primary btn-block" (click)="appendToDisplay('/')">/</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-primary btn-block" (click)="appendToDisplay('*')">*</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-primary btn-block" (click)="appendToDisplay('-')">-</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('7')">7</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('8')">8</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('9')">9</button></div>
+      <div class="col-3"><button class="btn btn-primary btn-block" (click)="appendToDisplay('+')">+</button></div>
+    </div>
+    <div class="row">
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('4')">4</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('5')">5</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('6')">6</button></div>
+      <div class="col-3"><button class="btn btn-success btn-block" (click)="calculateResult()">=</button></div>
+    </div>
+    <div class="row">
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('1')">1</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('2')">2</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('3')">3</button></div>
+      <div class="col-3"><button class="btn btn-light btn-block" (click)="appendToDisplay('0')">0</button></div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
